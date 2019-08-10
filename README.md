@@ -9,12 +9,13 @@ Date: August 9, 2019
 
 In this assignment, I had to create a web app that lets users view and leave comments on the latest news. But I did not actually write any articles; instead,I was to flexthe Mongoose and Cheerio muscles to scrape news from another site.
 
-# Technologexpress
+# Technologies used
 
-1.) express-handlebars
-2.) mongoose
-3.) cheerio
-4.) axiosies used
+1.) express
+2.) express-handlebars
+3.) mongoose
+4.) cheerio
+5.) axiosies used
 
 # Requirements
 
