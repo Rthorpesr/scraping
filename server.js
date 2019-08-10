@@ -59,7 +59,8 @@ app.get("/scrape", function(req, res) {
           titleArr.push(dbArticle[j].title)
         }
         console.log(titleArr);
-    request("https://universe.byu.edu/", function(error, response, html) {
+        //https://www.cnn.com/ -- https://universe.byu.edu/
+    request("https://www.npr.org/sections/news/", function(error, response, html) {
     if (!error && response.statusCode == 200) {
         // console.log(html);
       }
@@ -69,14 +70,14 @@ app.get("/scrape", function(req, res) {
         normalizeWhitespace: true,
       }
     })
-    $("body h3").each(function(i, element) {
+    $("h2").each(function(i, element) {
       // Save an empty result object
       var result = {};
       // Add the text and href of every link, and save them as properties of the result object
       result.title = $(element).children("a").text();
       found = titleArr.includes(result.title);
       result.link = $(element).children("a").attr("href");
-      result.excerpt = $(element).parent().children(".td-excerpt").text().trim();
+      result.excerpt = $(element).parent().children(".p teaster").text().trim();
       if (!found && result.title && result.link){
         results.push(result);
      }
