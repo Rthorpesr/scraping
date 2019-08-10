@@ -48,11 +48,11 @@ textarea {
     font-size: 18px;
 }
 #logo {
-    width: 400px;
+    width:900px;
     height: 400px;
     background-repeat: no-repeat, repeat;
-    background-image: url(images/logo.jpg), url(images/universe.jpg);
-    background-blend-mode: lighten;
+    /* background-image: url(images/logo.jpg), url(images/universe.jpg);
+    background-blend-mode: lighten; */
 }
 a
 {
