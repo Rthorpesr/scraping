@@ -49,7 +49,7 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
-// A GET route for scraping the Daily Universe website
+// A GET route for scraping the National Public Radio Inc.website
 app.get("/scrape", function(req, res) {
   var found;
   var titleArr = [];
@@ -59,7 +59,7 @@ app.get("/scrape", function(req, res) {
           titleArr.push(dbArticle[j].title)
         }
         console.log(titleArr);
-        //https://www.cnn.com/ -- https://universe.byu.edu/
+
     request("https://www.npr.org/sections/news/", function(error, response, html) {
     if (!error && response.statusCode == 200) {
         // console.log(html);
